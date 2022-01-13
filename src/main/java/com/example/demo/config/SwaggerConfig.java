@@ -19,8 +19,9 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.example.demo.rest"))
-                .paths(PathSelectors.regex("/emp/hello"))
+//                .apis(RequestHandlerSelectors.basePackage("com.example.demo.rest"))
+                .apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.regex("/emp.*"))
                 .build();
     }
 
